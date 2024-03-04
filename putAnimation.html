@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>put Animation</title>
+    <script src="https://kit.fontawesome.com/9d2ace7861.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<style>
+    .snipit{
+        background-color: #D1D3D4;
+        border-radius: 30px;
+        width: 800px;
+        height: 400px;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #putAnimation {
+        color: #442415;
+        border: #031F29 solid 1px;
+        width: 80%;
+        height: 80%;
+        position: relative;
+    }
+
+    #animateMe {
+        animation: putAnimate 4s;
+        animation-fill-mode: forwards;
+        /*animation-play-state: paused;*/
+    }
+
+    #file1 {
+        position: absolute;
+        left: 19%;
+        top: 55%;
+    }
+
+    #animateMe h3 {
+        position: absolute;
+        left: 18%;
+        top: 70%;
+    }
+
+    #dfile i {
+        position: absolute;
+        right: 19%;
+        top: 55%;
+    }
+
+    #dfile h3 {
+        position: absolute;
+        right: 18%;
+        top: 70%;
+    }
+
+    #server i{
+        position: absolute;
+        left: 15%;
+        top: 15%;
+    }
+
+    #server h3 {
+        position: absolute;
+        left: 20%;
+        top: 38%
+    }
+
+    #local i{
+        position: absolute;
+        right: 15%;
+        top: 15%;
+    }
+
+    #local h3 {
+        position: absolute;
+        right: 15%;
+        top: 38%
+    }
+
+    #upload {
+        position: absolute;
+        top: 15%;
+        left: 45%;
+    }
+
+    @keyframes putAnimate {
+        0% {
+            opacity: 0%;
+        }
+        100% {
+            opacity: 100%;
+        }
+    }
+
+</style>
+
+<div class="snipit">
+    <div id="putAnimation" class="animationbox">
+        <div  id="server" >
+            <i class="fa-solid fa-server fa-6x"></i>
+            <h3>server</h3>
+        </div>
+        <div id="local">
+            <i class="fa-solid fa-folder fa-6x"></i>
+            <h3>localDirectory</h3>
+        </div>
+        <div id="dfile">
+            <i class="fa-solid fa-file fa-4x"></i>
+            <h3>file1.txt</h3>
+        </div>
+        <div id="animateMe" >
+            <i id="file1" class="fa-solid fa-file fa-4x"></i>
+            <h3>file1.txt</h3>
+            <i id="upload" class="fa-solid fa-upload fa-4x"></i>
+        </div>
+    </div>
+</div>
